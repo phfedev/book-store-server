@@ -3,16 +3,47 @@ import {Entity, PrimaryGeneratedColumn, Column} from "typeorm";
 @Entity()
 export class User {
 
-    @PrimaryGeneratedColumn()
-    id: number;
+    @PrimaryGeneratedColumn({name:"id"})
+    private id: number;
 
-    @Column()
-    firstName: string;
+    @Column({name:"name"})
+    private name: string;
 
-    @Column()
-    lastName: string;
+    @Column({name:"email"})
+    private email: string;
 
-    @Column()
-    age: number;
+    @Column({name:"password"})
+    private password: string;
+
+    get getId(){
+        return this.id;
+    }
+
+    get getName(){
+        return this.name;
+    }
+
+    set setName(name: string){
+        this.name = name;
+    }
+
+    get getEmail(){
+        return this.email;
+    }
+
+    set setEmail(email: string){
+        this.email = email;
+    }
+
+    get getPassword(){
+        return this.password;
+    }
+
+    set setPassword(password: string){
+        this.password = password;
+    }
+
+
+
 
 }
