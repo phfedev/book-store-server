@@ -6,13 +6,13 @@ export class User {
     @PrimaryGeneratedColumn({name:"id"})
     private id: number;
 
-    @Column({name:"name"})
+    @Column({ name:"name" })
     private name: string;
 
-    @Column({name:"email"})
+    @Column({ name:"email" })
     private email: string;
 
-    @Column({name:"password"})
+    @Column({ name:"password" })
     private password: string;
 
     get getId(){
