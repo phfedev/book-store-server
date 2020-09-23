@@ -1,7 +1,9 @@
-# Awesome Project Build with TypeORM
+# Projeto de gestão de livros
 
-Steps to run this project:
+### Tecnologias Utilizadas [NodeJS, ExpressJS, TypeORM, TypeScript, PostgreSQL]
 
-1. Run `npm i` command
-2. Setup database settings inside `ormconfig.json` file
-3. Run `npm start` command
+Passos para rodar o projeto:
+
+1. Rode o comando `npm install`
+2. Altere as configurações do arquivo `ormconfig.json` para acessar ao seu banco de dados
+3. Rode `npm start`
