@@ -14,6 +14,8 @@
       "typeorm": "0.2.26"
    },
    "scripts": {
-      "start": "ts-node src/index.ts"
+      "test:user": "ts-node src/test/user/index.ts",
+      "test:book": "ts-node src/test/book/index.ts",
+      "start": "nodemon src/app.ts"
    }
 }
