@@ -1,5 +1,4 @@
-import { type } from 'os';
-import {Column, Entity, JoinTable, ManyToMany, PrimaryGeneratedColumn} from 'typeorm'
+import {Column, Entity, JoinTable, ManyToMany, PrimaryGeneratedColumn} from 'typeorm';
 import { Category } from './Category';
 
 @Entity()
@@ -16,43 +15,43 @@ export class Book{
 
     @ManyToMany(type => Category, category => category.books)
     @JoinTable({ name: 'book-categories',
-        joinColumn: {
-            name: 'book_id',
-            referencedColumnName: 'book_id'
-        },
-        inverseJoinColumn: {
-            name: 'category_name',
-            referencedColumnName: 'category_name'
-        }
+      joinColumn: {
+        name: 'book_id',
+        referencedColumnName: 'book_id'
+      },
+      inverseJoinColumn: {
+        name: 'category_name',
+        referencedColumnName: 'category_name'
+      }
     })
     categories: Category[]
 
     get getId(){
-        return this.book_id;
+      return this.book_id;
     }
 
     get getTitle(){
-        return this.title;
+      return this.title;
     }
 
     set setTitle(title: string){
-        this.title = title;
+      this.title = title;
     }
 
     get getAuthor(){
-        return this.author;
+      return this.author;
     }
 
     set setAuthor(author: string){
-        this.author = author;
+      this.author = author;
     }
 
     get getCategories(){
-        return this.categories;
+      return this.categories;
     }
 
     set setCategories(categories: Category[]){
-        this.categories = categories
+      this.categories = categories;
     }
 
 

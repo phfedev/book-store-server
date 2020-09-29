@@ -1,6 +1,6 @@
-import { type } from "os";
-import { Column, Entity, ManyToMany, PrimaryColumn } from "typeorm";
-import { Book } from "./Book";
+import { type } from 'os';
+import { Column, Entity, ManyToMany, PrimaryColumn } from 'typeorm';
+import { Book } from './Book';
 
 
 @Entity()
@@ -13,19 +13,19 @@ export class Category{
     books: Book[];
 
     get getName(){
-        return this.category_name;
+      return this.category_name;
     }
 
     set setName(name: string){
-        this.category_name = name;
+      this.category_name = name;
     }
 
     get getBooks(){
-        return this.books
+      return this.books;
     }
 
     set setBooks(books: Book[]){
-        this.books = books
+      this.books = books;
     }
 
 }

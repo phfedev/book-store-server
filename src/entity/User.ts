@@ -1,49 +1,44 @@
-import {Entity, PrimaryGeneratedColumn, Column} from "typeorm";
+import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 
 @Entity()
 export class User {
-
-    @PrimaryGeneratedColumn({name:"id"})
+    @PrimaryGeneratedColumn({ name: 'id' })
     private id: number;
 
-    @Column({ name:"name" })
+    @Column({ name: 'name' })
     private name: string;
 
-    @Column({ name:"email" })
+    @Column({ name: 'email' })
     private email: string;
 
-    @Column({ name:"password" })
+    @Column({ name: 'password' })
     private password: string;
 
-    get getId(){
-        return this.id;
+    get getId() {
+      return this.id;
     }
 
-    get getName(){
-        return this.name;
+    get getName() {
+      return this.name;
     }
 
-    set setName(name: string){
-        this.name = name;
+    set setName(name: string) {
+      this.name = name;
     }
 
-    get getEmail(){
-        return this.email;
+    get getEmail() {
+      return this.email;
     }
 
-    set setEmail(email: string){
-        this.email = email;
+    set setEmail(email: string) {
+      this.email = email;
     }
 
-    get getPassword(){
-        return this.password;
+    get getPassword() {
+      return this.password;
     }
 
-    set setPassword(password: string){
-        this.password = password;
+    set setPassword(password: string) {
+      this.password = password;
     }
-
-
-
-
 }
